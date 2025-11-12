@@ -191,7 +191,7 @@ body{
     justify-content: center;
     padding: 60px;
     gap: 90px;
-    position: absolute;
+    position: relative; /*THIS WAS RELATIVE BEFORE NOW ON THE NEW ONE IT SHOULD BE ABSOULTE, CHANGE BACK IF IT MESSES UP SOMETHING*/
 }
 .projectsSection.active{
     opacity: 1;
@@ -310,4 +310,5 @@ body{
     .projectsSection{
         flex-wrap: wrap;
     }
+
 }
