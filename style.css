@@ -1,0 +1,313 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(-90deg,#4F46E5, #9333EA);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+.navigationBar{
+    display: flex;
+    padding: 28px;
+    justify-content: space-between;
+}
+.rightNav{
+    display: flex;
+    gap: 50px;
+}
+.navigationBar a{
+    font-size: 30px;
+    font-weight:600;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.navigationBar a:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+    color: #E0D4FF;
+}
+.intro{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 150px 25px;
+}
+.introText{
+    text-align: center;
+    color:#FFFFFF;
+    text-shadow: 1px 1px 1px black;
+}
+.introText h1{
+    font-size: 40px;
+}
+.introText h2{
+    font-size: 30px;
+}
+.introText button{
+    border-radius: 10px;
+    width: 150px;
+    height: 60px;
+    font-size: 19px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.introText button:hover{
+    transform: scale(1.05);
+    color: white;
+    background-color: black;
+}
+.introImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introImage img {
+    width: 500px;       
+    height: 500px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.aboutMeDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#FFFFFF;
+    text-shadow: 1px 1px 1px black;
+    padding: 0 70px;
+}
+.aboutMeDiv h1{
+    font-size: 50px;
+}
+.aboutMeDiv p{
+    font-size: 25px;
+}
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    flex-direction: column;
+}
+.skills h1{
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px black;
+    font-size: 55px;
+}
+.programming img, .tools img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(1px 1px 1px #000000b3);
+}
+.otherSkills i{
+    font-size: 27px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+    padding: 3px;
+}
+.skillsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    align-items: flex-start; 
+    flex-wrap: nowrap;       
+    gap: 60px;
+    text-align: center;
+}
+.programming,.tools,.otherSkills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.programming h3, .tools h3, .otherSkills h3{
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 27px;
+    text-shadow: 1px 1px 1px black;
+}
+.programming ul, .tools ul, .otherSkills ul{
+    list-style: none;
+}
+.programming li, .tools li, .otherSkills li{
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+    gap: 12px;             
+    color: #FFFFFF;
+    font-size: 25px;
+    padding: 12px;
+    text-shadow: 1px 1px 1px black;
+}
+.skill-bar{
+    display: inline;
+    width: 150px;
+    height: 18px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    margin-left: 10px;
+    vertical-align: middle;
+    box-shadow: 1px 1px 1px black;
+    flex-shrink: 0; 
+}
+.skill-fill{
+    height: 100%;
+    background-color: #f89100;
+    border-radius: 5px;
+}
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px;
+}
+.projects h1{
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px black;
+    font-size: 55px;
+}
+.projects p{
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px black;
+    font-size: 25px;
+    padding: 0 5px;
+    text-align: center;
+}
+.projectsSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    gap: 90px;
+    position: absolute;
+}
+.projectsSection.active{
+    opacity: 1;
+    position: relative;
+}
+.projectsSection button{
+    background: none;
+    border: none;
+    font-size: 60px;
+    cursor: pointer;
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; 
+    color:aliceblue;
+    text-shadow: 1px 1px 1px black;
+}
+.projectsSection button:hover{
+    transform: translateY(-50%) scale(1.2);
+}
+.prev{
+    left: -8.5vw; 
+}
+.next{
+    right: -8.5vw; 
+}
+.projectsSection img{
+    width: 600px;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #00000084;
+    transition: 0.2s ease;
+}
+.projectsSection img:hover{
+    transform: scale(1.05);
+}
+.projectDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.projectDescription h3{
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px black;
+    margin-bottom: 0;
+}
+.projectDescription p{
+    font-size: 22px;
+}
+.projectDescription a{
+    background: white;
+    cursor: pointer;
+    font-size: 21px;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: 0.2s ease;
+}
+.projectDescription a:hover{
+    transform: scale(1.05);
+    background-color: #000000;
+    color: white;
+}   
+
+
+/*ADJUSTEMENTS FOR 500PX */
+@media (max-width: 500px) {
+    .navigationBar {
+        padding: 15px 10px;
+        gap: 35px;
+    }
+    .navigationBar a{
+        font-size: 22px;
+    }
+    #name {
+        text-align: center;
+        width: 100%;
+    }
+    .rightNav {
+        text-align: center;
+        width: 100%;
+    }
+    .introImage img {
+        width: 70vw;
+        height: 70vw; 
+    }
+    .introText button {
+        width: 180px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .skillsContainer{
+        flex-wrap: wrap;       
+    }
+    .projectsSection{
+        flex-wrap: wrap;
+    }
+    .projectsSection img{
+        width: 370px;
+        height: 30%;
+    }
+}
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column; 
+        padding: 50px 20px;   
+        gap: 30px;
+    }
+    .skillsContainer{
+        flex-wrap: wrap;       
+    }
+    .projectsSection{
+        flex-wrap: wrap;
+    }
+}
